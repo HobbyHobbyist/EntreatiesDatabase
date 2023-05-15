@@ -412,7 +412,7 @@ def print_entreaties():
 def do_it_all():
   cursor.execute("SELECT Schema_Name FROM Information_Schema.Schemata WHERE Schema_Name = 'Entreaties_DB' ")
   if len(cursor.fetchall()) > 0:
-    cursor.execute("""DROP DATABASE entreaties_db""")
+    cursor.execute("""DROP DATABASE Entreaties_DB""")
   create_entreaties_database()
   db.commit()
   create_dummy_profiles()
