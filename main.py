@@ -351,6 +351,12 @@ def create_entreaties_database():
   
   trigger_statements()
   procedures()
+  events()
+
+
+def events():
+  cursor.execute("""CREATE EVENT ping_database ON SCHEDULE EVERY 2 HOUR 
+  DO SELECT 1""")
 
 
 def create_dummy_profiles():
